@@ -1,27 +1,37 @@
-Sistema de Recomendação de Filmes com Grafos (Filtragem Colaborativa)
+--- SISTEMA DE RECOMENDAÇÃO DE FILMES COM GRAFO (Filtragem Colaborativa) ---
+Descrição do Projeto
 
--- Descrição do Projeto --
+Este projeto implementa um sistema de recomendação de filmes baseado em filtragem colaborativa, utilizando:
 
-Este projeto tem como objetivo implementar um sistema de recomendação de filmes baseado em filtragem colaborativa, utilizando modelagem em grafos bipartidos e projeção ponderada (método de Newman).
+Grafos bipartidos (usuários ↔ filmes)
 
-O sistema usará o dataset MovieLens (ml-latest-small ou ml-100k) para construir um grafo onde:
+Projeção ponderada por Newman para similaridade filme–filme
 
-Usuários e filmes são nós;
+Dataset MovieLens (ml-latest-small ou ml-100k)
 
-Arestas representam avaliações (userId → movieId, com peso = nota dada);
+A lógica central consiste em:
 
-O grafo é projetado sobre o conjunto de filmes para calcular similaridades entre eles;
+ - Criar um grafo bipartido onde:
 
-A recomendação é feita a partir dos filmes avaliados positivamente por um usuário e dos filmes mais similares no grafo projetado.
+ - Usuários e filmes são nós
 
--- Objetivos -- 
+ - Arestas representam avaliações, com peso = nota dada
 
-Modelar relações muitos-para-muitos usando grafos bipartidos.
+Projetar o grafo no conjunto de filmes, calculando similaridades
+Recomendação para um usuário baseada nos filmes que ele avaliou positivamente + filmes similares na projeção
 
-Aplicar o conceito de projeção de grafos ponderada (colaboração de Newman).
+--- COMO EXECUTAR O PROJETO ---
 
-Implementar uma lógica de recomendação baseada em grafos.
+1. Clonar o repositório
+git clone https://github.com/seu-usuario/seu-repo.git
+cd seu-repo
 
-Avaliar resultados com métricas de precisão e ranking.
+2. Criar e ativar um ambiente virtual (opcional, mas recomendado)
+python -m venv venv
+venv\Scripts\activate
 
-Explorar extensões com PageRank personalizado e embeddings de grafos.
+3. Instalar dependências
+pip install -r requirements.txt
+
+4. Executar via Jupyter Notebook
+jupyter notebook
