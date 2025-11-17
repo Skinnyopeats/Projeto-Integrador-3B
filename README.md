@@ -23,8 +23,8 @@ Recomendação para um usuário baseada nos filmes que ele avaliou positivamente
 --- COMO EXECUTAR O PROJETO ---
 
 1. Clonar o repositório
-git clone https://github.com/seu-usuario/seu-repo.git
-cd seu-repo
+git clone https://github.com/seu-usuario/seu-repo.git](https://github.com/Skinnyopeats/Projeto-Integrador-3B.git)
+cd Projeto-Integrador-3B
 
 2. Criar e ativar um ambiente virtual (opcional, mas recomendado)
 python -m venv venv
